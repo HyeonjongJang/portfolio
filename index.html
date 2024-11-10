@@ -488,46 +488,136 @@
 						<h2 id="side-projects-section" class="mb-4"></h2>
 						<h2 class="heading">Side Projects</h2>
 						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
+							<div class="text pl-3">
+								<span class="date">2019.03-2019.12</span>
+								<div class="d-flex">
+									<h2 class="year-selector" style="cursor: pointer;">Freshman</h2>
+								</div>
 							</div>
 							<div class="text pl-3">
-								<h3 class="year-selector" data-year="1">1학년 (2019-1~2019-2)</h3>
-								<div id="project-details" style="display: none;">
-									<h2>Artificial Intelligence Developer</h2>
-									<span class="position">ESUPARTNERS</span>
-									<p>지도학습을 활용한 세브란스병원과의 과제 협업, 코틀린 언어를 활용한 앱&웹 개발, 외국인 개발자들과의 애자일 방법론을 통한 소통<br /></p>
-									<b class="text-primary">기술 스택</b>
-									<p>Python, Kotlin, AWS S3 Static Hosting</p>
-									<b class="text-primary">주요 업무</b>
-									<ul>
-										<li>논문 서치 및 연구를 통한 과제 달성 방법 서치 및 정리</li>
-										<li>세브란스 병원 교수 및 실무자들과의 지속적인 미팅 (R&D 연구원)</li>
-										<li>4가지 이상의 앱&웹 프로젝트 진행 및 개발</li>
-										<li>AWS 서버 호스팅 및 로컬(데스크탑) 서버 구축</li>
-									</ul>
-									<button id="back-to-list">목록으로 돌아가기</button>
+								<span class="date">2019.03-2019.12</span>
+								<div class="d-flex">
+									<h2 class="year-selector" style="cursor: pointer;">Sophomore</h2>
+								</div>
+							</div>
+							<div class="text pl-3">
+								<span class="date">2019.03-2019.12</span>
+								<div class="d-flex">
+									<h2 class="year-selector" style="cursor: pointer;">Junior</h2>
+								</div>
+							</div>
+							<div class="text pl-3">
+								<span class="date">2019.03-2019.12</span>
+								<div class="d-flex">
+									<h2 class="year-selector" style="cursor: pointer;">Senior</h2>
 								</div>
 							</div>
 						</div>
+						
+						<!-- 프로젝트 목록 -->
+						<div id="project-list" style="display: none; margin-top: 20px;">			
+							<!-- Freshman Projects -->
+							<div id="freshman-projects" class="project-group" style="display: none;">
+								<h2 style="font-weight: bold;">Freshman Projects</h2>
+								<ul>
+									<li>
+										<h4 class="project-title" style="cursor: pointer; font-size:0.9em">프로젝트 A: 식품 성분 분석 어플리케이션</h4>
+										<p class="project-description" style="display: none;">이 프로젝트는 바코드 인식을 통해 식품 성분 분석을 대신 해주는 어플리케이션 개발을 목표로 하였습니다. 주요 기능: 사용자 친화적인 UI/UX 디자인, 실시간 바코드 스캔 기능, 식품 성분 데이터베이스와의 연동.</p>
+									</li>
+								</ul>
+							</div>
+					
+							<!-- Sophomore Projects -->
+							<div id="sophomore-projects" class="project-group" style="display: none;">
+								<h2 style="font-weight: bold;">Sophomore Projects</h2>
+								<ul>
+									<li>
+										<h4 class="project-title" style="cursor: pointer; font-size:0.9em">프로젝트 C: 개인 일정 관리 애플리케이션</h4>
+										<p class="project-description" style="display: none;">이 프로젝트는 개인 일정 관리 애플리케이션 개발을 목표로 하였습니다. 주요 기능: 일정 추가 및 수정, 알림 기능, 사용자 친화적인 UI.</p>
+									</li>
+								</ul>
+							</div>
+					
+							<!-- Junior Projects -->
+							<div id="junior-projects" class="project-group" style="display: none;">
+								<h2 style="font-weight: bold;">Junior Projects</h2>
+								<ul>
+									<li>
+										<h4 class="project-title" style="cursor: pointer; font-size:0.9em">프로젝트 E: 전자 상거래 웹사이트</h4>
+										<p class="project-description" style="display: none;">이 프로젝트는 전자 상거래 웹사이트 개발을 목표로 하였습니다. 주요 기능: 제품 목록, 장바구니, 결제 시스템.</p>
+									</li>
+								</ul>
+							</div>
+					
+							<!-- Senior Projects -->
+							<div id="senior-projects" class="project-group" style="display: none;">
+								<h2 style="font-weight: bold;">Senior Projects</h2>
+								<ul>
+									<li>
+										<h4 class="project-title" style="cursor: pointer; font-size:0.9em">프로젝트 G: 인공지능 기반 추천 시스템</h4>
+										<p class="project-description" style="display: none;">이 프로젝트는 인공지능을 활용한 추천 시스템 개발을 목표로 하였습니다. 주요 기능: 사용자 행동 분석, 개인 맞춤형 추천 제공.</p>
+									</li>
+								</ul>
+							</div>
+							
+							<button id="back-to-list">Back to list</button>
+						</div>
+					
+						<!-- 세부정보 영역 -->
+						<div id="project-details" style="display: none; margin-top: 20px;">
+							<h3>More information</h3>
+							<p id="details-text"></p>
+							<button id="back-to-projects">Back to list</button>
+						</div>
 					</div>
+					
 					<script>
 						document.addEventListener('DOMContentLoaded', function() {
-							const yearSelector = document.querySelector('.year-selector');
-							const projectDetails = document.getElementById('project-details');
+							const yearSelectors = document.querySelectorAll('.year-selector');
+							const projectList = document.getElementById('project-list');
 							const backToListButton = document.getElementById('back-to-list');
+							const projectGroups = document.querySelectorAll('.project-group');
 					
-							// 1학년 클릭 이벤트
-							yearSelector.addEventListener('click', function() {
-								projectDetails.style.display = 'block'; // 세부정보 보여주기
+							// 모든 프로젝트 그룹 숨기기
+							projectGroups.forEach(group => group.style.display = 'none');
+					
+							// 학년 클릭 이벤트
+							yearSelectors.forEach(selector => {
+								selector.addEventListener('click', function() {
+									// 선택된 학년의 프로젝트 목록만 보여주기
+									projectGroups.forEach(group => group.style.display = 'none'); // 모든 그룹 숨기기
+									const selectedYear = this.textContent.trim().toLowerCase(); // 클릭한 학년 이름 가져오기
+									const groupToShow = document.getElementById(selectedYear + '-projects');
+									if (groupToShow) {
+										groupToShow.style.display = 'block'; // 선택한 학년의 그룹만 보여주기
+									}
+									projectList.style.display = 'block'; // 프로젝트 목록 보여주기
+								});
 							});
 					
 							// 목록으로 돌아가기 버튼 클릭 이벤트
 							backToListButton.addEventListener('click', function() {
+								projectList.style.display = 'none'; // 프로젝트 목록 숨기기
+							});
+					
+							// 프로젝트 제목 클릭 이벤트
+							document.querySelectorAll('.project-title').forEach(item => {
+								item.addEventListener('click', function() {
+									const description = this.nextElementSibling; // 클릭한 제목 아래의 설명을 가져옴
+									description.style.display = description.style.display === 'none' || description.style.display === '' ? 'block' : 'none'; // 설명 표시/숨기기
+								});
+							});
+					
+							// 세부정보 목록으로 돌아가기 버튼 클릭 이벤트
+							document.getElementById('back-to-projects').addEventListener('click', function() {
 								projectDetails.style.display = 'none'; // 세부정보 숨기기
+								projectList.style.display = 'block'; // 프로젝트 목록 보여주기
 							});
 						});
 					</script>
+					
+					
+					
 				</div>
 			</div>
 		</div>
