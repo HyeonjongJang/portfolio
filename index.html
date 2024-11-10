@@ -165,6 +165,7 @@
 							<li><a href="#page-2">Experience</a></li>
 							<li><a href="#page-3">Skills</a></li>
 							<li><a href="#page-4">Projects</a></li>
+							<li><a href="#page-5">SideProjects</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -481,11 +482,57 @@
 								</div>
 								<div> <b class="text-dark">주요 기능 : </b> 바코드 인식을 통해 식품 성분 분석을 대신 해주는 어플리케이션 개발 </div>
 							</div>
+							
+					</div>
+					<div id="page-5" class="page five">
+						<h2 id="side-projects-section" class="mb-4"></h2>
+						<h2 class="heading">Side Projects</h2>
+						<div class="resume-wrap d-flex ftco-animate">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="flaticon-ideas"></span>
+							</div>
+							<div class="text pl-3">
+								<h3 class="year-selector" data-year="1">1학년 (2019-1~2019-2)</h3>
+								<div id="project-details" style="display: none;">
+									<h2>Artificial Intelligence Developer</h2>
+									<span class="position">ESUPARTNERS</span>
+									<p>지도학습을 활용한 세브란스병원과의 과제 협업, 코틀린 언어를 활용한 앱&웹 개발, 외국인 개발자들과의 애자일 방법론을 통한 소통<br /></p>
+									<b class="text-primary">기술 스택</b>
+									<p>Python, Kotlin, AWS S3 Static Hosting</p>
+									<b class="text-primary">주요 업무</b>
+									<ul>
+										<li>논문 서치 및 연구를 통한 과제 달성 방법 서치 및 정리</li>
+										<li>세브란스 병원 교수 및 실무자들과의 지속적인 미팅 (R&D 연구원)</li>
+										<li>4가지 이상의 앱&웹 프로젝트 진행 및 개발</li>
+										<li>AWS 서버 호스팅 및 로컬(데스크탑) 서버 구축</li>
+									</ul>
+									<button id="back-to-list">목록으로 돌아가기</button>
+								</div>
+							</div>
 						</div>
 					</div>
+					<script>
+						document.addEventListener('DOMContentLoaded', function() {
+							const yearSelector = document.querySelector('.year-selector');
+							const projectDetails = document.getElementById('project-details');
+							const backToListButton = document.getElementById('back-to-list');
+					
+							// 1학년 클릭 이벤트
+							yearSelector.addEventListener('click', function() {
+								projectDetails.style.display = 'block'; // 세부정보 보여주기
+							});
+					
+							// 목록으로 돌아가기 버튼 클릭 이벤트
+							backToListButton.addEventListener('click', function() {
+								projectDetails.style.display = 'none'; // 세부정보 숨기기
+							});
+						});
+					</script>
 				</div>
 			</div>
 		</div>
+
+		
 	</section>
   <section>
 
